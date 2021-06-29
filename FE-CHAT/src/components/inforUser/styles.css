@@ -1,0 +1,47 @@
+.infor-user {
+  width: 650px;
+  height: 75px;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: flex;
+}
+
+.infor-user .avatar {
+  position: relative;
+}
+
+.infor-user .avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.infor-user .infor {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infor-user .name {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.infor-user .number-chat {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.infor-user .online {
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
+  background-color: green;
+  position: absolute;
+  right: 10px;
+  bottom: -5px;
+  z-index: 10;
+}

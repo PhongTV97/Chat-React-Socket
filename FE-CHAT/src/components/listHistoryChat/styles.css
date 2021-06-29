@@ -1,0 +1,9 @@
+.list-chat {
+  width: 280px;
+  border-radius: 20px;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+}

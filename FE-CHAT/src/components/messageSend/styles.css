@@ -1,0 +1,37 @@
+.message-send-container {
+  float: right;
+}
+
+.message-send {
+  border-width: 1px;
+  display: flex;
+  margin: 15px 0px 5px 0px;
+}
+
+.message-send-container .time {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 60px;
+}
+
+.message-send .avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message-send .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.message-send .content-message {
+  background-color: #ccc;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  margin-right: 15px;
+  max-width: 500px;
+}

@@ -1,5 +1,7 @@
 .message-send-container {
   float: right;
+  display: grid;
+  justify-content: flex-end;
 }
 
 .message-send {

@@ -1,8 +1,40 @@
 .chat {
-  width: 700px;
-  height: "100%";
+  height: 450px;
   padding: 10px 10px;
+  overflow-y: auto;
+}
+
+.chat-container{
+  background-color: #fbf7ed;
+  position: relative;
   border: 1px solid #ccc;
   border-radius: 20px;
-  position: relative;
+  width: 700px;
+}
+
+.chat-container .chat .content {
+  display: flex;
+  flex-direction: column
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
 }

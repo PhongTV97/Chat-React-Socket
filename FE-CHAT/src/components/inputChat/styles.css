@@ -1,19 +1,19 @@
 .input-chat {
-  width: 650px;
-  border-radius: 10px;
-  position: absolute;
+  border-radius: 20px;
   bottom: 0;
   height: 60px;
   bottom: 5px;
   border: 1px solid #cccccc;
+  background-color: white;
   padding: 5px 10px;
   display: flex;
+  margin-top: 10px;
 }
 
 .input-chat input {
   outline: none;
   border: none;
-  width: 560px !important;
+  width: 580px !important;
   height: 60px !important;
   font-size: 15px;
 }

@@ -3,7 +3,7 @@ import "./styles.css";
 
 const MessageReceive = () => {
   return (
-    <>
+    <div style={{display: "block"}}>
       <div className="message-receive">
         <div className="avatar">
           <img
@@ -17,7 +17,7 @@ const MessageReceive = () => {
         </div>
       </div>
       <div className="time">8:55 AM, Today</div>
-    </>
+    </div>
   );
 };
 

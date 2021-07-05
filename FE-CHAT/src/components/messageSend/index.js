@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles.css";
 
-const MessageSend = () => {
+const MessageSend = ({ content }) => {
   return (
     <div className="message-send-container">
       <div className="message-send">
         <div className="content-message">
-          <p>Hello, My name is Robot! </p>
+          <p>{content}</p>
         </div>
         <div className="avatar">
           <img

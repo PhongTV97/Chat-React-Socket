@@ -2,10 +2,19 @@ import express from "express";
 import dotenv from "dotenv";
 import router from "./routes/index.js";
 import { Server } from "socket.io";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+
+app.use(cors());
+
+app.use(express.json({ limit: "50mb", extended: true }));
+
+// npm install body-parser
+// import bodyParser from "body-parser";
+app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 app.use("/", router);
 
@@ -16,8 +25,12 @@ var server = app.listen(process.env.SERVER_PORT || 8080, () => {
 
 //connect socket
 
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+  },
+});
 
 io.on("connection", (socket) => {
-  console.log("a user connect to socket: ", socket);
+  console.log("a user connect to socket");
 });

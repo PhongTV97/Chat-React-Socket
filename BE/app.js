@@ -33,4 +33,9 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log("a user connect to socket");
+  socket.on("client-sent-data", (data) => {
+    console.log(data);
+    //sau khi lắng nghe dữ liệu, server phát lại dữ liệu này đến các client khác
+    socket.emit("server-sent-data", "Aaaa");
+  });
 });

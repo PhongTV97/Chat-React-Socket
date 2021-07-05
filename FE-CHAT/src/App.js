@@ -7,12 +7,26 @@ const ENDPOINT = "http://localhost:8080";
 function App() {
   const [message, setMessage] = useState("");
   const [lstMessage, setLstMessage] = useState([]);
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const socket = socketIOClient(ENDPOINT);
+    socket.on("connection", (res) => {
+      console.log(res);
+    });
+
+    socket.on("server-sent-data", (res) => {
+      console.log(res);
+      setData(res);
+    });
+  }, []);
 
   const onChange = (text) => {
     setMessage(text);
   };
 
   const sendMessageToServer = () => {
+    const socket = socketIOClient(ENDPOINT);
     const list = [...lstMessage];
     const object = {
       isMessageSend: true,
@@ -20,14 +34,8 @@ function App() {
     };
     list.push(object);
     setLstMessage([...list]);
+    socket.emit("client-sent-data", object);
   };
-
-  useEffect(() => {
-    const socket = socketIOClient(ENDPOINT);
-    socket.emit("connection", (data) => {
-      console.log(data);
-    });
-  }, []);
 
   return (
     <div className="App">
